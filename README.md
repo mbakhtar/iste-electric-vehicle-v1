@@ -5,7 +5,7 @@
 
 This repository can be added as an **extension** in MakeCode.
 
-* open [Electric Vehicle Tutorial v1](https://makecode.microbit.org/#tutorial:github:mbakhtar/iste-electric-vehicle-v1/electricvehicle)
+* open [Line Follower Robot Tutorial v1](https://makecode.microbit.org/#tutorial:github:mbakhtar/iste-electric-vehicle-v1/electricvehicle)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/mbakhtar/iste-electric-vehicle-v1** and import
