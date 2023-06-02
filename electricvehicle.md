@@ -1,4 +1,4 @@
-# Electric Vehicle
+# Line Follower Robot
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 solar=github:climate-action-kits/pxt-fwd-edu
