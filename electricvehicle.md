@@ -1,4 +1,4 @@
-# Line Follower Robot
+# Electric Vehicle Prototype
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 solar=github:climate-action-kits/pxt-fwd-edu
@@ -62,7 +62,7 @@ basic.forever(function () {
 })
 ```
 ## Step 5 
-For the ``||Line Follower Robot||`` to follow the line, its important
+For the ``||Electric Vehicle Prototype||`` to follow the line, its important
 to make it turn either left or right to keep it on the path. Click on ``||fwdMotors: Motors||`` and
 add the ``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
 ``||fwdSensors:line1 state is •||`` ``||logic:then||`` and change the ``||fwdMotors:Turn 0||``
@@ -84,7 +84,7 @@ basic.forever(function () {
 ```
 ## Step 6 
 Click on ``||fwdMotors:Motors||`` to add ``||fwdMotors:Drive foward 50||`` block,
-this is to drive the ``||Line Follower Robot||`` straight, and add it to the second
+this is to drive the ``||Electric Vehicle Prototype||`` straight, and add it to the second
 ``||logic:if||`` ``||fwdSensors:line2 state is o||`` ``||logic:then||``.
 Add the ``||fwdMotors: Turn 0 in place||`` block for the last ``||logic:if||``
 ``||fwdSensors:line3 state is •||`` ``||logic:then||``. Change the ``||fwdMotors:Turn 0||``
@@ -110,7 +110,7 @@ basic.forever(function () {
 ## Step 7 
 Click on the ``||basic:basic||`` drawer and add a ``||basic:pause 500 ms||`` block in 
 each ``||logic:if then||`` condition. This allows for the ``||fwdSensors:Sensors||`` 
-to detect if the ``||Line Follower Robot||`` is off track, and it instructs the ``||Robot||``
+to detect if the ``||Electric Vehicle Prototype||`` is off track, and it instructs the ``||Robot||``
 to turn towards the line.
 ```blocks
 fwdMotors.setupDriving(
@@ -134,6 +134,5 @@ basic.forever(function () {
 })
 ```
 ## Step 8 
-Download your code to test your Line Follower Robot.
-Congratulations on completing your Line Follower Car!
-Everyone can use tech to make the world a better place! Go back to the Forward Edu lesson for more activities and extensions.
+Download your code to test your Electric Vehicle Prototype.
+Congratulations on completing your Electric Vehicle Prototype! - Go back to the lesson for more activities and extensions.
