@@ -7,8 +7,9 @@ solar=github:climate-action-kits/pxt-fwd-edu
 Plug your USB cable into the micro:bit and insert it into the 
 Climate Action Kit board. Click on the button to the right of 
 download and follow the steps to pair your micro:bit.
-![pair gif](https://raw.githubusercontent.com/mbakhtar/iste-electric-vehicle-v1/master/pair%20microbit-280x203.gif)
 ![breakout board](https://raw.githubusercontent.com/mbakhtar/wind-turbine-lesson-tutorial/master/breakout-resized.png)
+![pair gif](https://raw.githubusercontent.com/mbakhtar/iste-electric-vehicle-v1/master/pair%20microbit-280x203.gif)
+
 
 ## Step 2 
 Click on the ``||fwdMotors:Motors||`` drawer and drag the
