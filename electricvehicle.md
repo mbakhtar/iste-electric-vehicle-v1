@@ -7,11 +7,14 @@ solar=github:climate-action-kits/pxt-fwd-edu
 Plug your USB cable into the micro:bit and insert it into the 
 Climate Action Kit board. Click on the button to the right of 
 download and follow the steps to pair your micro:bit.
+![Plug your USB cable into the micro:bit and insert it into the 
+Climate Action Kit board. Click on the button to the right of 
+download and follow the steps to pair your micro:bit.](https://github.com/mbakhtar/iste-electric-vehicle-v1/blob/master/Breakout%20Board%20(transparent).png)
 
 ## Step 2 
-Click on the ``||fwdMotors:Motors||`` drawer and drag
-``||fwdMotors:Setup Driving||`` block and place it under
-``||basic:on start||`` loop. Set ``||fwdMotors:left motor to servo1||``
+Click on the ``||fwdMotors:Motors||`` drawer and drag the
+``||fwdMotors:Setup Driving||`` block and place it under the
+``||basic:on start||`` loop. Set the ``||fwdMotors:left motor to servo1||``
  and ``||fwdMotors:right motor to servo2||``
 Click on the ``||fwdMotors:+||`` symbol to set the bias to ``||fwdMotors: 0||``
 ```blocks
@@ -22,8 +25,8 @@ fwdMotors.servo2,
 )
 ```
 ## Step 3 
-Click on the ``||logic:Logic||`` drawer and drag ``||logic:if true then||`` block.
-Place three ``||logic:if true then||`` block inside the ``||basic:forever||`` loop.
+Click on the ``||logic:Logic||`` drawer and drag the ``||logic:if true then||`` block into the ``||basic:forever||`` loop.
+Repeat this step 2 more times until there are 3 ``||logic:if true then||`` blocks in the ``||basic:forever||`` loop.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -40,7 +43,7 @@ basic.forever(function () {
 })
 ```
 ## Step 4 
-Add ``||fwdSensors: line1 state is •||`` to the first ``||logic:if true||`` block.
+From ``||fwdSensors:Sensors||`` drawer, add ``||fwdSensors: line1 state is •||`` to the first ``||logic:if true||`` block.
 Add ``||fwdSensors: line2 state is o||`` to the second ``||logic:if true||`` block.
 For the last ``||logic:if true||`` condition add ``||fwdSensors: line3 state is •||`` block.
 ```blocks
@@ -60,8 +63,8 @@ basic.forever(function () {
 ```
 ## Step 5 
 For the ``||Line Follower Robot||`` to follow the line, its important
-to make it turn either left or right to keep it on the path. Click on ``||fwdMotors: Motors||``
-add ``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
+to make it turn either left or right to keep it on the path. Click on ``||fwdMotors: Motors||`` and
+add the ``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
 ``||fwdSensors:line1 state is •||`` ``||logic:then||`` and change the ``||fwdMotors:Turn 0||``
 to ``||fwdMotors:5||``
 ```blocks
@@ -81,9 +84,9 @@ basic.forever(function () {
 ```
 ## Step 6 
 Click on ``||fwdMotors:Motors||`` to add ``||fwdMotors:Drive foward 50||`` block,
-this is to drive the ``||Line Follower Robot||`` straight, in the middle or the second
+this is to drive the ``||Line Follower Robot||`` straight, and add it to the second
 ``||logic:if||`` ``||fwdSensors:line2 state is o||`` ``||logic:then||``.
-Add ``||fwdMotors: Turn 0 in place||`` block for the last ``||logic:if||``
+Add the ``||fwdMotors: Turn 0 in place||`` block for the last ``||logic:if||``
 ``||fwdSensors:line3 state is •||`` ``||logic:then||``. Change the ``||fwdMotors:Turn 0||``
 to ``||fwdMotors:-5||``
 ```blocks
@@ -105,9 +108,9 @@ basic.forever(function () {
 })
 ```
 ## Step 7 
-Click on ``||basic:basic||`` drawer and add ``||basic:pause 500 ms||`` block in 
+Click on the ``||basic:basic||`` drawer and add a ``||basic:pause 500 ms||`` block in 
 each ``||logic:if then||`` condition. This allows for the ``||fwdSensors:Sensors||`` 
-to detect the ``||Line Follower Robot||`` is off track/path and instruct the ``||Robot||``
+to detect if the ``||Line Follower Robot||`` is off track, and it instructs the ``||Robot||``
 to turn towards the line.
 ```blocks
 fwdMotors.setupDriving(
