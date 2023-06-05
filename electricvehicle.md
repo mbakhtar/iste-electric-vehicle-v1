@@ -3,7 +3,7 @@
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 solar=github:climate-action-kits/pxt-fwd-edu
 ```
-## Step 1 
+## Step 1 @showdialog
 Plug your USB cable into the micro:bit and insert it into the 
 Climate Action Kit board. Click on the button to the right of 
 download and follow the steps to pair your micro:bit.
