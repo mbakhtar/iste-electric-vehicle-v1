@@ -135,5 +135,5 @@ basic.forever(function () {
 ```
 ## Step 8 
 Download your code to test your Line Follower Robot.
-Congratulations on completing your Automatic Irrigation System!
+Congratulations on completing your Line Follower Car!
 Everyone can use tech to make the world a better place! Go back to the Forward Edu lesson for more activities and extensions.
