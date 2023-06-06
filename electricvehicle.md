@@ -5,13 +5,15 @@ solar=github:climate-action-kits/pxt-fwd-edu
 ```
 ## Step 1 @showdialog
 Plug your USB cable into the micro:bit and insert it into the 
-Climate Action Kit board. Click on the button to the right of 
-download and follow the steps to pair your micro:bit.
+Climate Action Kit board. 
 ![breakout board](https://raw.githubusercontent.com/mbakhtar/wind-turbine-lesson-tutorial/master/breakout-resized.png)
+
+## Step 2 @showhint
+Click on the button to the right of download and follow the steps to pair your micro:bit.
 ![pair gif](https://raw.githubusercontent.com/mbakhtar/iste-electric-vehicle-v1/master/pair%20microbit-280x203.gif)
 
 
-## Step 2 
+## Step 3 
 Click on the ``||fwdMotors:Motors||`` drawer and drag the
 ``||fwdMotors:Setup Driving||`` block and place it under the
 ``||basic:on start||`` loop. Set the ``||fwdMotors:left motor to servo1||``
@@ -24,7 +26,7 @@ fwdMotors.servo2,
 0
 )
 ```
-## Step 3 
+## Step 4 
 Click on the ``||logic:Logic||`` drawer and drag the ``||logic:if true then||`` block into the ``||basic:forever||`` loop.
 Repeat this step 2 more times until there are 3 ``||logic:if true then||`` blocks in the ``||basic:forever||`` loop.
 ```blocks
@@ -42,7 +44,7 @@ basic.forever(function () {
             }
 })
 ```
-## Step 4 
+## Step 5
 From ``||fwdSensors:Sensors||`` drawer, add ``||fwdSensors: line1 state is •||`` to the first ``||logic:if true||`` block.
 Add ``||fwdSensors: line2 state is o||`` to the second ``||logic:if true||`` block.
 For the last ``||logic:if true||`` condition add ``||fwdSensors: line3 state is •||`` block.
@@ -61,7 +63,7 @@ basic.forever(function () {
         }
 })
 ```
-## Step 5 
+## Step 6
 For the ``||Electric Vehicle Prototype||`` to follow the line, its important
 to make it turn either left or right to keep it on the path. Click on ``||fwdMotors: Motors||`` and
 add the ``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
@@ -82,7 +84,7 @@ basic.forever(function () {
     if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
         })
 ```
-## Step 6 
+## Step 7
 Click on ``||fwdMotors:Motors||`` to add ``||fwdMotors:Drive foward 50||`` block,
 this is to drive the ``||Electric Vehicle Prototype||`` straight, and add it to the second
 ``||logic:if||`` ``||fwdSensors:line2 state is o||`` ``||logic:then||``.
@@ -107,7 +109,7 @@ basic.forever(function () {
         }
 })
 ```
-## Step 7 
+## Step 8
 Click on the ``||basic:basic||`` drawer and add a ``||basic:pause 500 ms||`` block in 
 each ``||logic:if then||`` condition. This allows for the ``||fwdSensors:Sensors||`` 
 to detect if the ``||Electric Vehicle Prototype||`` is off track, and it instructs the ``||Robot||``
@@ -133,6 +135,6 @@ basic.forever(function () {
     }
 })
 ```
-## Step 8 
+## Step 9
 Download your code to test your Electric Vehicle Prototype.
 Congratulations on completing your Electric Vehicle Prototype! - Go back to the lesson for more activities and extensions.
