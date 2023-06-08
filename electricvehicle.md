@@ -14,26 +14,44 @@ Click on the button to the right of download and follow the steps to pair your m
 
 
 ## Step 3 
-Click on the ``||fwdMotors:Motors||`` drawer and drag the
-``||fwdMotors:Setup Driving||`` block and place it under the
-``||basic:on start||`` loop. Set the ``||fwdMotors:left motor to servo1||``
- and ``||fwdMotors:right motor to servo2||``
-Click on the ``||fwdMotors:+||`` symbol to set the bias to ``||fwdMotors: 0||``
+Click on the ``||fwdMotors:Motors||`` drawer, find and drag the
+``||fwdMotors:Setup Driving||`` block to place it under the
+``||basic:on start||`` loop.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
-fwdMotors.servo2,
-0
+fwdMotors.servo1,
 )
 ```
 ## Step 4 
-Click on the ``||logic:Logic||`` drawer and drag the ``||logic:if true then||`` block into the ``||basic:forever||`` loop.
-Repeat this step 2 more times until there are 3 ``||logic:if true then||`` blocks in the ``||basic:forever||`` loop.
+Change the ``||fwdMotors:right motor to servo2||``. 
+Keep the ``||fwdMotors: left motor to servo1||``.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
 fwdMotors.servo2,
-0
+)
+```
+## Step 5
+Click on the ``||logic:Logic||`` drawer and find the ``||logic:if true then||`` block.
+Drag and place it inside or under the ``||basic:forever||`` loop.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
+)
+basic.forever(function () {
+    if (true) {
+            }
+    })
+```
+## Step 6
+Repeat the last step 2 more times to have 3 ``||logic:if true then||`` blocks 
+in the ``||basic:forever||`` loop.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
 )
 basic.forever(function () {
     if (true) {
@@ -44,15 +62,45 @@ basic.forever(function () {
             }
 })
 ```
-## Step 5
-From ``||fwdSensors:Sensors||`` drawer, add ``||fwdSensors: line1 state is •||`` to the first ``||logic:if true||`` block.
+## Step 7
+From ``||fwdSensors:Sensors||`` drawer, add ``||fwdSensors: line1 state is •||`` 
+to the first ``||logic:if true||`` block.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        }
+    if (true) {
+        }
+    if (true) {
+        }
+})
+```
+## Step 8
 Add ``||fwdSensors: line2 state is o||`` to the second ``||logic:if true||`` block.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        }
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+        }
+    if (true) {
+        }
+})
+```
+## Step 9
 For the last ``||logic:if true||`` condition add ``||fwdSensors: line3 state is •||`` block.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
 fwdMotors.servo2,
-0
 )
 basic.forever(function () {
     if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
@@ -63,17 +111,32 @@ basic.forever(function () {
         }
 })
 ```
-## Step 6
+## Step 10
 For the ``||Electric Vehicle Prototype||`` to follow the line, its important
-to make it turn either left or right to keep it on the path. Click on ``||fwdMotors: Motors||`` and
-add the ``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
-``||fwdSensors:line1 state is •||`` ``||logic:then||`` and change the ``||fwdMotors:Turn 0||``
-to ``||fwdMotors:5||``
+to make it turn either left or right to keep it on the path. 
+Click on ``||fwdMotors: Motors||`` and add the 
+``||fwdMotors: Turn 0 in place||`` block under the first ``||logic: if||`` 
+``||fwdSensors:line1 state is •||`` ``||logic:then||`` condition.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
 fwdMotors.servo2,
-0
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(0)
+        }
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+            }
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        })
+```
+## Step 11
+Change the ``||fwdMotors:Turn 0||`` to ``||fwdMotors:5||``
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
 )
 basic.forever(function () {
     if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
@@ -84,18 +147,35 @@ basic.forever(function () {
     if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
         })
 ```
-## Step 7
-Click on ``||fwdMotors:Motors||`` to add ``||fwdMotors:Drive foward 50||`` block,
+## Step 12
+Click on ``||fwdMotors:Motors||`` to add ``||fwdMotors:Drive forward 50||`` block,
 this is to drive the ``||Electric Vehicle Prototype||`` straight, and add it to the second
 ``||logic:if||`` ``||fwdSensors:line2 state is o||`` ``||logic:then||``.
-Add the ``||fwdMotors: Turn 0 in place||`` block for the last ``||logic:if||``
-``||fwdSensors:line3 state is •||`` ``||logic:then||``. Change the ``||fwdMotors:Turn 0||``
-to ``||fwdMotors:-5||``
+Change the ``||fwdMotors:Drive forward 50||`` to ``||fwdMotors:20||``
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
 fwdMotors.servo2,
-0
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(5)
+            }
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+        }
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        }
+})
+```
+## Step 13
+Add the ``||fwdMotors: Turn 0 in place||`` block for the last ``||logic:if||``
+``||fwdSensors:line3 state is •||`` ``||logic:then||`` condition. 
+Also change the ``||fwdMotors:Turn 0||`` to ``||fwdMotors:-5||``.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
 )
 basic.forever(function () {
     if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
@@ -109,11 +189,61 @@ basic.forever(function () {
         }
 })
 ```
-## Step 8
-Click on the ``||basic:basic||`` drawer and add a ``||basic:pause 500 ms||`` block in 
-each ``||logic:if then||`` condition. This allows for the ``||fwdSensors:Sensors||`` 
-to detect if the ``||Electric Vehicle Prototype||`` is off track, and it instructs the ``||Robot||``
-to turn towards the line.
+## Step 14
+Click on the ``||basic:Basic||`` drawer and find a ``||basic:pause 100 ms||``
+block. Drag and drop it under or inside after the ``||fwdMotors:Turn 5 in place||`` block.
+This allows for the ``||fwdSensors:Line Sensors||`` to detect if the 
+``||Electric Vehicle Prototype||`` is off track, and it instructs the 
+``||Robot||`` to turn towards the line/path.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(5)
+        basic.pause(100)
+    }
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+        }
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(-5)
+        }
+})
+```
+## Step 15
+Repeat the last step to add 2 more ``||basic:pause 100 ms||`` blocks.
+Click on the ``||basic:basic||`` drawer and add a ``||basic:pause 100 ms||``
+block inside and after ``||fwdMotors:Drive Forward at 50||`` block and
+``||fwdMotors:Turn -5 in place||`` block.
+```blocks
+fwdMotors.setupDriving(
+fwdMotors.servo1,
+fwdMotors.servo2,
+)
+basic.forever(function () {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(5)
+        basic.pause(100)
+    }
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+        basic.pause(100)
+    }
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+        fwdMotors.turn(-5)
+        basic.pause(100)
+    }
+})
+```
+## Step 16
+Click on the ``||fwdMotors:+||`` symbol of the ``||fwdMotors:Setup Driving||``
+block nested in the ``||basic:on start||`` block
+to set the bias to ``||fwdMotors: 0||``.
+Also change ``||basic:pause 100 ms||`` to ``||basic:500 ms||``of all the 
+``||basic:pause||`` blocks. This step finalises your code.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -135,6 +265,6 @@ basic.forever(function () {
     }
 })
 ```
-## Step 9
-Download your code to test your Electric Vehicle Prototype.
+## Step 17
+``|Download|`` and test your code. 
 Congratulations on completing your Electric Vehicle Prototype! - Go back to the lesson for more activities and extensions.
