@@ -5,7 +5,7 @@ solar=github:climate-action-kits/pxt-fwd-edu
 ```
 ## @showdialog
 Welcome to Electric Vehicle Coding Tutorial
-![built project](https://raw.githubusercontent.com/mbakhtar/iste-electric-vehicle-v1/master/project%20-%20electric%20car.png)
+![built project](https://raw.githubusercontent.com/mbakhtar/iste-electric-vehicle-v1/master/project%20-%20electric%20car-400.png)
 
 ## Step 1 @showdialog
 Plug your USB cable into the micro:bit and insert it into the 
