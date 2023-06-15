@@ -63,7 +63,7 @@ basic.forever(function () {
 })
 ```
 ## Step 9
-Click ``||logic:Logic||`` drag and drop ``||logic:if true then||`` block under the 2nd ``||logic:if true then||`` block
+Click ``||logic:Logic||`` drag and drop ``||logic:if true then||`` block under the 2nd ``||logic:if true then||`` block. _Note: Three ``||logic:if true then||`` blocks are used._
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -95,7 +95,7 @@ basic.forever(function () {
 })
 ```
 ## Step 11
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors: line2 state is o||`` to replace ``||logic:true||`` condition of 2nd ``||logic:if true then||`` block.
+Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors: line2 state is o||`` to replace ``||logic:true||`` condition of 2nd ``||logic:if true then||`` block. _Note: Use drop down menu to change line number._
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -111,7 +111,7 @@ basic.forever(function () {
 })
 ```
 ## Step 12
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors: line3 state is •||`` to replace ``||logic:true||`` condition of 3rd ``||logic:if true then||`` block.
+Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors: line3 state is •||`` to replace ``||logic:true||`` condition of 3rd ``||logic:if true then||`` block.  _Note: Use drop down menu to change line number._
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -222,7 +222,7 @@ basic.forever(function () {
 ```
 ## Step 18
 Click ``||basic:basic||`` drag and drop ``||basic:pause (ms) 100||``
-block under ``||fwdMotors:Drive Forward at 50||`` block.
+block under ``||fwdMotors:Drive Forward at 20||`` block.
 ```blocks
 fwdMotors.setupDriving(
 fwdMotors.servo1,
@@ -294,4 +294,3 @@ basic.forever(function () {
 ## Step 21
 ``|Download|`` and test your code. 
 Congratulations on completing your Electric Vehicle Prototype! - Go back to the lesson for more activities and extensions.
-Click [here](https://forwardedu.com/course/electric-vehicles/) to go back to the lesson.
