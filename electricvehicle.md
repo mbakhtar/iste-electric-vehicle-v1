@@ -86,7 +86,7 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         }
     if (true) {
         }
@@ -102,9 +102,9 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
         }
     if (true) {
         }
@@ -118,11 +118,11 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
         }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         }
 })
 ```
@@ -135,12 +135,12 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(0)
         }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
             }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         })
 ```
 ## Step 14
@@ -151,12 +151,12 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
         }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
             }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         })
 ```
 ## Step 15
@@ -169,13 +169,13 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
             }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         }
 })
 ```
@@ -189,13 +189,13 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
             }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(-5)
         }
 })
@@ -208,14 +208,14 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
         basic.pause(100)
     }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(-5)
         }
 })
@@ -229,15 +229,15 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
         basic.pause(100)
     }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         basic.pause(100)
     }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(-5)
     }
 })
@@ -251,15 +251,15 @@ fwdMotors.servo1,
 fwdMotors.servo2,
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
         basic.pause(100)
     }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         basic.pause(100)
     }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(-5)
         basic.pause(100)
     }
@@ -277,15 +277,15 @@ fwdMotors.servo2,
 0
 )
 basic.forever(function () {
-    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line1.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(5)
         basic.pause(500)
     }
-    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.lineSensorState.miss)) {
-        fwdMotors.drive(fwdMotors.drivingDirection.forward, 20)
+    if (fwdSensors.line2.fwdIsLineSensorState(fwdSensors.LineSensorState.Miss)) {
+        fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 20)
         basic.pause(500)
     }
-    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.lineSensorState.hit)) {
+    if (fwdSensors.line3.fwdIsLineSensorState(fwdSensors.LineSensorState.Hit)) {
         fwdMotors.turn(-5)
         basic.pause(500)
     }
