@@ -294,3 +294,4 @@ basic.forever(function () {
 ## Step 21
 ``|Download|`` and test your code. 
 Congratulations on completing your Electric Vehicle Prototype! - Go back to the lesson for more activities and extensions.
+Want to check your code click [here](https://makecode.microbit.org/S00697-39074-44503-13255).
